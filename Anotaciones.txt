@@ -1,0 +1,12 @@
+Programación orientada a objetos:
+
+    -Un objeto en Java es una instancia existente en la memoria del ordenador
+    que tiene unas propiedades, llamados atributos, y unas operaciones disponibles
+    específicas, llamados métodos.
+
+    -Al crear una clase, la creamos sin un método main().
+
+    -Las clases no ejecutables deben escribirse la primera letra en mayúscula, en camel
+    case y no se escribe al final App.
+
+    
