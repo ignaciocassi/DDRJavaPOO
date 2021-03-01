@@ -1,22 +1,38 @@
 public class Empleado {
-    //Atributos
+    //Constantes
+    private final static double SALARIO_DEFAULT=40000;
 
+    //Atributos
     private String nombre;
     private String apellido;
     private int edad;
     private double salario;
 
-    //Métodos
+    //Métodos:
+    //Constructor vacío:
+    public Empleado() {
+        this("","",0,SALARIO_DEFAULT);
+    }
 
+    //Sobrecarga de métodos, constructores.
+    //Constructor con 1 param:
+    public Empleado(String nombre) {
+        this(nombre,"",0,SALARIO_DEFAULT);
+    }
+
+    //Constructor con 2 param:
+    public Empleado(String nombre, String apellido) {
+        this(nombre,apellido,0,SALARIO_DEFAULT);
+    }
+
+    //Constructor con 3 param:
+    public Empleado(String nombre, String apellido, int edad) {
+        this(nombre,apellido,edad,SALARIO_DEFAULT);
+    }
     
     //Método constructor:
-    //public nombre_clase(parámetros para inicializar atributos)
-    //Inicializa las variables, también puede ejecutar algún método.
-    //Si no se crea manualmente, java crea uno automaticamente que no hace nada.
-    //También puede inicializar los atributos sin parámetros, es decir, con valores
-    //por defecto, como por ejemplo una constante.
+    //Constructor con los 4 param:
     public Empleado(String nombre, String apellido, int edad, double salario) {
-        
         this.nombre=nombre;
         this.apellido=apellido;
         this.edad=edad;
@@ -56,6 +72,7 @@ public class Empleado {
         this.salario = salario;
     }
 
+    //Método toString()
     @Override
     public String toString() {
         return "{" +
@@ -79,5 +96,4 @@ public class Empleado {
            //Devuelve true si aplico el aumento, false si no.
            return aumento;
     }
-
 }
